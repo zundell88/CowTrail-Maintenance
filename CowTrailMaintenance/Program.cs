@@ -49,6 +49,7 @@ namespace CowTrailMaintenance
             var startNode = nodeArray[rnd.Next(nodeArray.Length - 1)];
             startNode.visited = true;
             visitedNodes.Add(startNode);
+
             while (visitedNodes.Count != amountNodes)
             {
                 int lowestWeight = 0;
@@ -89,17 +90,14 @@ namespace CowTrailMaintenance
         public static void AddNodeToArray(string[] input)
         {
             if (input.Length > 3)
-            {
-                throw new ArgumentOutOfRangeException("Input innehöll för många tecken");
-            }
+                throw new ArgumentOutOfRangeException("Input innehåller för många tecken");
+            
             int from = int.Parse(input[0]);
             int to = int.Parse(input[1]);
             int weight = int.Parse(input[2]);
 
             if (weight == 0)
-            {
                 throw new ArgumentOutOfRangeException("Vikt kan inte vara noll");
-            }
 
             // Try to get the Node from the array
             Node nodeFrom = nodeArray[from - 1];
