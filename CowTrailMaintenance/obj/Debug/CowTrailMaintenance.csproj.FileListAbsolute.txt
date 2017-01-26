@@ -1,0 +1,6 @@
+D:\Skolgrejer\Diskret Matematik 2\CowTrailMaintenance\CowTrailMaintenance\bin\Debug\CowTrailMaintenance.exe.config
+D:\Skolgrejer\Diskret Matematik 2\CowTrailMaintenance\CowTrailMaintenance\bin\Debug\CowTrailMaintenance.exe
+D:\Skolgrejer\Diskret Matematik 2\CowTrailMaintenance\CowTrailMaintenance\bin\Debug\CowTrailMaintenance.pdb
+D:\Skolgrejer\Diskret Matematik 2\CowTrailMaintenance\CowTrailMaintenance\obj\Debug\CowTrailMaintenance.csprojResolveAssemblyReference.cache
+D:\Skolgrejer\Diskret Matematik 2\CowTrailMaintenance\CowTrailMaintenance\obj\Debug\CowTrailMaintenance.exe
+D:\Skolgrejer\Diskret Matematik 2\CowTrailMaintenance\CowTrailMaintenance\obj\Debug\CowTrailMaintenance.pdb
