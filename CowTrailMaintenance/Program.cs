@@ -80,9 +80,8 @@ namespace CowTrailMaintenance
             }
 
             foreach (var node in nodeArray)
-            {
                 node.visited = false;
-            }
+            
 
             return $"{totalWeight}";
         }
