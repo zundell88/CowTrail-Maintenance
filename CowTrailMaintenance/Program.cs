@@ -17,10 +17,10 @@ namespace CowTrailMaintenance
         {
             Console.Write($"Skriv in antal (hörn, kanter): ");
             var firstInput = Console.ReadLine().Split(' ');
-            nodeArray = new Node[int.Parse(firstInput[0])]; // bygger Node-array med input nr 1
+            nodeArray = new Node[int.Parse(firstInput[0])];
             amountNodes = int.Parse(firstInput[0]);
 
-            for (int i = 0; i < int.Parse(firstInput[1]); i++) // körs efter input nr2 
+            for (int i = 0; i < int.Parse(firstInput[1]); i++)
             {
                 Console.Write($"Ge input: ");
                 var input = Console.ReadLine().Split(' ');
@@ -71,7 +71,7 @@ namespace CowTrailMaintenance
                     }
                 }
 
-                //After finding the edge add to counter and mark node as visited
+                //After finding the edge, add to counter and mark node as visited
                 totalWeight += lowestWeight;
                 var nextNode = nodeArray[nodeId - 1];
                 nextNode.visited = true;
@@ -101,18 +101,18 @@ namespace CowTrailMaintenance
                 throw new ArgumentOutOfRangeException("Vikt kan inte vara noll");
             }
 
-            // Hämtar noden från array
+            // Try to get the Node from the array
             Node nodeFrom = nodeArray[from - 1];
             Node nodeTo = nodeArray[to - 1];
 
-            // Kolla From-noden
+            // Check if it allready exists
             if (nodeFrom != null)
             {
                 int oldWeight;
-                //kolla om det finns en kant mellan från och till
+                //Check if there is an edge between the nodes
                 nodeArray[nodeFrom.Id - 1].neighbours.TryGetValue(to, out oldWeight);
 
-                //finns det inte skapa till noden
+                //If not, create
                 if (oldWeight == 0)
                 {
                     if (nodeTo == null)
@@ -125,9 +125,9 @@ namespace CowTrailMaintenance
                     }
                     else
                     {
-                        nodeTo.neighbours.Add(from, weight); // lägg till från-noden till till-nodens grannar
+                        nodeTo.neighbours.Add(from, weight); 
                         nodeArray[nodeTo.Id - 1] = nodeTo;
-                        nodeArray[nodeFrom.Id - 1].neighbours.Add(to, weight); //Lägg till nya grannen med vikt
+                        nodeArray[nodeFrom.Id - 1].neighbours.Add(to, weight); 
                     }
                 }
                 else if (weight < oldWeight)
@@ -141,7 +141,7 @@ namespace CowTrailMaintenance
                 nodeArray[nodeFrom.Id - 1] = nodeFrom;
             }
 
-            // Kolla To-noden
+            // Check if to-Node exists
             if (nodeTo != null)
             {
                 int oldWeight;
