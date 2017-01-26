@@ -82,13 +82,12 @@ namespace CowTrailMaintenance
             foreach (var node in nodeArray)
                 node.visited = false;
             
-
             return $"{totalWeight}";
         }
 
         public static void AddNodeToArray(string[] input)
         {
-            if (input.Length > 3)
+            if (input.Length != 3)
                 throw new ArgumentOutOfRangeException("Input innehåller för många tecken");
             
             int from = int.Parse(input[0]);
