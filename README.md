@@ -1,2 +1,1 @@
-CowTrailMaintenance
-School assignment with the Prim algorithm
+School assignment with the use of Prim algorithm
